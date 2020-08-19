@@ -106,10 +106,16 @@ body {
 }
 
 
-@media (max-width: 620px) {
+@media (max-width: 768px) {
     .cards {
       justify-content: center;
     }
+  
+  .gallery-cell {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+      }
   }
 
 @media (max-width: 420px) {
