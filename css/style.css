@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #111111;
+  line-height: 32px;
+  max-width: 1294px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.gallery-cell {
+  width: 276px;
+  height: 242px;
+  cursor: pointer;
+  perspective: 1000px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 58px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.gallery-cell:hover .wrapper,
+.gallery-cell.flipped .wrapper {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card__face--front,
+.card__face--back {
+  background: linear-gradient(220.3deg, #ffdc5d 3.28%, #fbc937 96.3%);
+  box-shadow: 0px 11px 20px rgba(201, 118, 0, 0.3);
+}
+
+.card__face--back {
+  background-color: #000;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card_contents {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.advantages__item-icon {
+  height: 90px;
+  margin-top: 45px;
+}
+
+.advantages__item-img {
+  max-width: 123px;
+}
+
+.advantages__item-text {
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #282d33;
+  padding-bottom: 30px;
+  max-width: 200px;
+  margin-top: 15px;
+}
+
+.card__face-text {
+  display: flex;
+  font-size: 16px;
+  line-height: 22px;
+  align-items: center;
+  color: #282d33;
+  padding: 20px;
+}
+
+
+@media (max-width: 620px) {
+    .cards {
+      justify-content: center;
+    }
+  }
+
+@media (max-width: 420px) {
+    .gallery-cell {
+        width: 210px;
+        height: 180px;
+        margin-bottom: 35px;
+    }
+
+    .advantages__item-text {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #282d33;
+        padding-bottom: 30px;
+        max-width: 190px;
+        margin-top: 15px;
+    }
+
+    .advantages__item-icon {
+        height: 80px;
+        margin-top: 45px;
+    }
+
+    .advantages__item-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card__face-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+  }
